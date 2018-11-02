@@ -1,12 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
-
     public function index()
     {
         return view('pages.index');
@@ -26,5 +22,12 @@ class HomeController extends Controller
     function thanks($name, Request $request){
         return view('pages.thankyou')->with(compact('name'));
     }
-
+    public function login()
+    {
+        return view('auth.login');
+    }
+    public function register()
+    {
+        return view('auth.register');
+    }
 }
