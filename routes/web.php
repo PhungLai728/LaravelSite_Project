@@ -11,21 +11,12 @@
 |
 */
 
-Auth::routes();
-
+//Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::post('/contact', 'HomeController@store')->name('contact.store');
 Route::get('/thanks/{name}', 'HomeController@thanks')->name('thanks');
-
-
-//Route::post('/contact', function () {
-//    $data = request()->all();
-//    echo "Name: " .$data['name']. '<br>';
-//    echo "Email: " . $data['email'] . '<br>';
-//    echo "Message: " . $data['body'];
-//});
 
 
 
