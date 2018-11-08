@@ -30,4 +30,8 @@ class HomeController extends Controller
     {
         return view('auth.register');
     }
+    public function home()
+    {
+        return view('pages.home');
+    }
 }

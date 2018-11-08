@@ -14,11 +14,13 @@ class DeleteCarTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testDeleteCar()
     {
-        $deletecar = Car::inRandomOrder()->first();
+        $deletecar = Car::all()->find(50);
 
         $deletecar->delete();
+
+      //  $this->assertTrue($deletecar->delete());
 
         $this->assertInstanceOf('\App\Car', $deletecar);
 

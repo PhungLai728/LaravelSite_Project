@@ -18,10 +18,11 @@ class CountCarTest extends TestCase
 //    {
 //        $this->assertTrue(true);
 //    }
-    public function testExample()
+    public function testCountCar()
     {
-        $carCount = Car::count();
+        $car = Car::All();
+        $carCount = $car->count();
 //        dd($carCount);
-        $this->assertEquals(50,$carCount);
+        $this->assertEquals(51,$carCount);
     }
 }
