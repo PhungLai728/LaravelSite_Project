@@ -14,15 +14,18 @@ class CountCarTest extends TestCase
      *
      * @return void
      */
-//        public function testExample()
-//    {
-//        $this->assertTrue(true);
-//    }
+
+    use RefreshDatabase;
     public function testCountCar()
     {
-        $car = Car::All();
-        $carCount = $car->count();
-//        dd($carCount);
-        $this->assertEquals(51,$carCount);
+//        factory(\App\Car::class, 50)->create()->each(function ($car) {
+//            $car->posts()->save(factory(\App\Car::class)->make());
+//        });
+
+
+
+        $car = \App\Car::all();
+        $carCount = \App\Car::all()->count();
+        $this->assertEquals(50,$carCount);
     }
 }

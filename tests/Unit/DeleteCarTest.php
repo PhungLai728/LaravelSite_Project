@@ -16,7 +16,7 @@ class DeleteCarTest extends TestCase
      */
     public function testDeleteCar()
     {
-        $deletecar = Car::all()->find(50);
+        $deletecar = Car::all()->find(51);
 
         $deletecar->delete();
 
